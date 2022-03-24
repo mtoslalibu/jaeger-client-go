@@ -166,6 +166,8 @@ func (t *Tracer) StartSpan(
 	for _, o := range options {
 		o.Apply(&sso)
 	}
+	fmt.Printf(operationName, " Mert creating span now\n")
+	
 	return t.startSpanWithOptions(operationName, sso)
 }
 
